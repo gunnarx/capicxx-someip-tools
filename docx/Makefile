@@ -22,7 +22,7 @@ ug_html: docgendir
 				-a tabsize=4 \
 				-b html \
 				-o $(htmldocgendir)/CommonAPISomeIPCppUserGuide.html \
-				CommonAPISomeIPCppUserGuide
+				CommonAPISomeIPCppUserGuide.asciidoc
 
 ug_pdf: docgendir
 	mkdir -p $(pdfdocgendir)
@@ -37,7 +37,7 @@ ug_pdf: docgendir
 		--dblatex-opts "-P latex.output.revhistory=0 -P imagedata.default.scale=maxwidth=10cm,maxheight=8cm" \
 		--icons \
 		-D $(pdfdocgendir) \
-		CommonAPISomeIPCppUserGuide
+		CommonAPISomeIPCppUserGuide.asciidoc
 
 docgendir:
 	mkdir -p $(docgendir)
